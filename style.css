@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #E6F0FA;
+    font-family: 'Poppins', sans-serif;
+}
+
+#game-wrapper {
+    text-align: center;
+}
+
+#game-container {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+}
+
+#game-canvas {
+    border: 4px solid #A9CCE3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#menu, #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('https://www.transparenttextures.com/patterns/burlap.png'), #F5F5DC;
+    color: #5D8299;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    border: 4px solid #A2D9CE;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.02); }
+}
+
+#logo, #logo-gameover {
+    width: 300px; /* Adjust based on your logo size */
+    height: auto;
+    margin: 0 auto 40px;
+    display: block;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+#game-over p {
+    font-size: 24px;
+    margin: 0 0 30px;
+    color: #5D8299;
+}
+
+#menu.hidden, #game-over.hidden {
+    display: none;
+}
+
+button {
+    padding: 16px 32px;
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+    background: linear-gradient(#A2D9CE, #76D7C4);
+    color: #FFF;
+    border: 2px solid #8FBC8F;
+    border-radius: 20px;
+    margin: 15px auto;
+    display: block;
+    width: 70%;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(#76D7C4, #5DADE2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#quit-btn, #quit-btn-gameover {
+    background: linear-gradient(#D2691E, #A0522D);
+    border: 2px solid #F5CBA7;
+}
+
+#quit-btn:hover, #quit-btn-gameover:hover {
+    background: linear-gradient(#A0522D, #8B5A2B);
+}
